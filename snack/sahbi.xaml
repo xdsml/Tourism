@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.sahbi"
+             Title="Snack Sa7bi"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Image de fond avec overlay sombre -->
+        <AbsoluteLayout>
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        </AbsoluteLayout>
+
+        <!-- Contenu défilant -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="15" Padding="15" BackgroundColor="White" Margin="10">
+
+                <!-- Carousel d’images -->
+                <Grid>
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkGray"
+                                   ItemsSource="{Binding Images}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,10" />
+                </Grid>
+
+                <!-- Informations principales -->
+                <Label Text="Snack Sa7bi"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+
+                <Label Text="snack · 1–50 MAD"
+                       FontSize="14"
+                       TextColor="Gray" />
+
+                <Label Text="Je recommande vivement"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Italic" />
+
+                <!-- Étoiles -->
+                <HorizontalStackLayout Spacing="2">
+                    <Label Text="3,8" TextColor="Black" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                </HorizontalStackLayout>
+
+                <!-- Commentaire client -->
+
+
+                <!-- Détails du service -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Adresse : Q, 90 Boulevard Al Maqdis, Oujda 60000" FontSize="14" TextColor="Black" />
+                    <Label Text="📞 05365-07954." FontSize="14" TextColor="Black" />
+                    <Label Text="Horaires : 
+vendredi	07:00–02:00
+samedi	07:00–02:00
+dimanche	07:00–02:00
+lundi	05:30–02:00
+mardi	07:00–02:00
+mercredi	07:00–02:00
+jeudi	07:00–02:00
+
+" FontSize="14" TextColor="Black" />
+
+                </VerticalStackLayout>
+
+                <!-- Plats recommandés -->
+                <Label Text="Avis"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Padding="5,10" />
+
+
+
+                <Label Text="Très bon endroit pour faire plaisir à votre désir, un large choix des plats, menu bien préparé, et surtout le goût et vraiment attractive.
+
+L'équipe professionnel, le chef cuisinier et vraiment un artiste dans ça cuisine.
+
+Ne ratez pas l'occasion de visiter ce snack."
+       FontSize="14"
+       TextColor="Black"
+       FontAttributes="Bold"
+       Padding="5,10" />
+                <Label Text="I was eating at this restaurant when the staff suddenly took my hot sauce before I even finished my meal. Instead of giving it to another customer, they just placed it back on the counter. It felt rushed and unprofessional. Disappointed with the service.  "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+
+
+                <!-- Carte (image statique) -->
+                <Image Source="localsahbi.jpg"
+                       Aspect="AspectFill"
+                       HeightRequest="200"
+                       Margin="0,10" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation fixe en bas -->
+        <Frame Grid.Row="1"
+       CornerRadius="25"
+       Padding="0"
+       HeightRequest="70"
+       HasShadow="True"
+       Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

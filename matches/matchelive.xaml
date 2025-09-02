@@ -1,0 +1,89 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="menu.matches.matchelive"
+             BackgroundColor="#F5F5F5"
+             Title="Matches">
+
+    <Grid RowDefinitions="*,Auto">
+        <!-- Haut = contenu / Bas = barre fixe -->
+
+        <!-- Contenu principal -->
+        <ScrollView Grid.Row="0">
+            <StackLayout Padding="10" Spacing="15">
+                <Label Text="⚽ Scores en direct" 
+                       FontSize="28" 
+                       FontAttributes="Bold"
+                       TextColor="#333"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,10" />
+
+                <CollectionView x:Name="ScoresList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" Margin="5" CornerRadius="15" BackgroundColor="White" HasShadow="True">
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="1.5*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Équipe domicile -->
+                                    <StackLayout Grid.Column="0" Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
+                                        <Image Source="{Binding HomeTeamLogo}" WidthRequest="40" HeightRequest="40" />
+                                        <Label Text="{Binding HomeTeamName}" 
+                                         FontAttributes="Bold" 
+                                         FontSize="14" 
+                                         TextColor="#1E88E5" 
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="StartAndExpand"
+                                         LineBreakMode="TailTruncation" />
+
+                                    </StackLayout>
+
+                                    <!-- Score -->
+                                    <StackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Label Text="{Binding Score}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                        <Label Text="{Binding MatchStatusIcon}" TextColor="{Binding MatchStatusColor}" FontSize="16"/>
+                                    </StackLayout>
+
+                                    <!-- Équipe extérieure -->
+                                    <StackLayout Grid.Column="2" Orientation="Horizontal" Spacing="10" VerticalOptions="Center" HorizontalOptions="End">
+                                        <Label Text="{Binding AwayTeamName}" 
+                                         FontAttributes="Bold" 
+                                         FontSize="14" 
+                                         TextColor="#D32F2F" 
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="EndAndExpand"
+                                         LineBreakMode="TailTruncation" />
+
+                                        <Image Source="{Binding AwayTeamLogo}" WidthRequest="40" HeightRequest="40" />
+                                    </StackLayout>
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation en bas -->
+        <Frame Grid.Row="1"
+        CornerRadius="25"
+        Padding="0"
+        HeightRequest="70"
+        HasShadow="True"
+        Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

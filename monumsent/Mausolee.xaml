@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.Mausolee"
+             Title="Mausolée Mohammed V"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Image de fond avec overlay sombre -->
+        <AbsoluteLayout>
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        </AbsoluteLayout>
+
+        <!-- Contenu défilant -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="15" Padding="15" BackgroundColor="White" Margin="10">
+
+                <!-- Carousel d’images -->
+                <Grid>
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkGray"
+                                   ItemsSource="{Binding Images}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,10" />
+                </Grid>
+
+                <!-- Informations principales -->
+                <Label Text="Mausolée Mohammed V"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+
+                <Label Text="À propos
+Le mausolée Mohammed-V est un tombeau royal situé à Rabat, capitale du Maroc. Il se trouve sur l'esplanade de la tour Hassan et en surplomb de l'embouchure du fleuve Bouregreg"
+                       FontSize="14"
+                       TextColor="Gray" />
+
+                <Label Text="Adresse : 25FH+3C2, Rabat"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Italic" />
+
+                <!-- Étoiles -->
+                <HorizontalStackLayout Spacing="2">
+                    <Label Text="4,6" TextColor="Black" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                </HorizontalStackLayout>
+
+                <!-- Commentaire client -->
+
+
+                <!-- Détails du service -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Date d'ouverture : 1971" FontSize="14" TextColor="Black" />
+                    <Label Text="Personnes inhumées : Hassan II, Mohammed V, Moulay Abdellah, Aïcha du Maroc." FontSize="14" TextColor="Black" />
+                    <Label Text="Horaires : 
+dimanche	08:15–17:45
+lundi	08:00–18:00
+mardi	08:00–18:00
+mercredi	08:00–18:00
+jeudi	08:00–18:00
+vendredi	08:00–18:00
+samedi	08:15–17:45
+" FontSize="14" TextColor="Black" />
+
+                </VerticalStackLayout>
+
+                <!-- Plats recommandés -->
+                <Label Text="Architecte : Eric Vo Toan"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Padding="5,10" />
+
+
+
+                <Label Text="Construction : 1961"
+       FontSize="14"
+       TextColor="Black"
+       FontAttributes="Bold"
+       Padding="5,10" />
+                <Label Text="Partie de : Mosquée Hassan et mausolée Mohammed V (d) "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+                <Label Text="Style : Architecture mauresque "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+                <Label Text="Type : Mausolée "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+
+
+                <!-- Carte (image statique) -->
+                <Frame CornerRadius="20"
+Padding="0"
+HasShadow="True"
+BorderColor="#ddd"
+BackgroundColor="White"
+Margin="20,10"
+HorizontalOptions="Center">
+                    <ImageButton Source="localmosule.png"
+          Aspect="AspectFill"
+          HeightRequest="220"
+          WidthRequest="360"
+          BackgroundColor="Transparent"
+          CornerRadius="20"
+          Clicked="OpenGoogleMaps" />
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation fixe en bas -->
+        <Frame Grid.Row="1"
+CornerRadius="25"
+Padding="0"
+HeightRequest="70"
+HasShadow="True"
+Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

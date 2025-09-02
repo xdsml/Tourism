@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.LExcellence"
+             Title="L'Excellence Gold"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Image de fond avec overlay sombre -->
+        <AbsoluteLayout>
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        </AbsoluteLayout>
+
+        <!-- Contenu défilant -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="15" Padding="15" BackgroundColor="White" Margin="10">
+
+                <!-- Carousel d’images -->
+                <Grid>
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkGray"
+                                   ItemsSource="{Binding Images}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,10" />
+                </Grid>
+
+                <!-- Informations principales -->
+                <Label Text="L'Excellence Gold"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+
+                <Label Text="Café · 50–100 MAD"
+                       FontSize="14"
+                       TextColor="Gray" />
+
+                <Label Text="Je recommande vivement"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Italic" />
+
+                <!-- Étoiles -->
+                <HorizontalStackLayout Spacing="2">
+                    <Label Text="3,5" TextColor="Black" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="White" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                </HorizontalStackLayout>
+
+                <!-- Commentaire client -->
+
+
+                <!-- Détails du service -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Adresse : M472+H4R, Bd Hassan II, Oujdaa" FontSize="14" TextColor="Black" />
+                    <Label Text="📞 053 6 50 18 50." FontSize="14" TextColor="Black" />
+                    <Label Text="Horaires : 
+08h00 - 00h00. 
+" FontSize="14" TextColor="Black" />
+
+                </VerticalStackLayout>
+
+                <!-- Plats recommandés -->
+                <Label Text="Avis"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Padding="5,10" />
+
+
+
+                <Label Text="Excellente boulangerie pâtisserie. Produits de qualité. Ils servent un très petit déjeuner marocain avec beaucoup de choix. Prix abordable. "
+       FontSize="14"
+       TextColor="Black"
+       FontAttributes="Bold"
+       Padding="5,10" />
+                <Label Text="Nous avons mangé là-bas hier soir en famille.
+Le repas était délicieux, le restaurant est très propre et l’accueil chaleureux.
+Je recommande vivement.
+Ps: les nouilles et là salade vietnamienne un délice.  "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+
+
+                <!-- Carte (image statique) -->
+                <Frame CornerRadius="20"
+Padding="0"
+HasShadow="True"
+BorderColor="#ddd"
+BackgroundColor="White"
+Margin="20,10"
+HorizontalOptions="Center">
+                    <ImageButton Source="localexcellence.jpg"
+          Aspect="AspectFill"
+          HeightRequest="220"
+          WidthRequest="360"
+          BackgroundColor="Transparent"
+          CornerRadius="20"
+          Clicked="OpenGoogleMaps" />
+                </Frame>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation fixe en bas -->
+        <Frame Grid.Row="1"
+CornerRadius="25"
+Padding="0"
+HeightRequest="70"
+HasShadow="True"
+Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

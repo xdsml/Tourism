@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.amy"
+             Title="Amy's Garden"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Image de fond avec overlay sombre -->
+        <AbsoluteLayout>
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        </AbsoluteLayout>
+
+        <!-- Contenu défilant -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="15" Padding="15" BackgroundColor="White" Margin="10">
+
+                <!-- Carousel d’images -->
+                <Grid>
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkGray"
+                                   ItemsSource="{Binding Images}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,10" />
+                </Grid>
+
+                <!-- Informations principales -->
+                <Label Text="Amy's Garden"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+
+                <Label Text="Café · 50–100 MAD"
+                       FontSize="14"
+                       TextColor="Gray" />
+
+                <Label Text="AMY’S GARDEN est un univers gourmand et ludique, où la nourriture délicieuse se marie avec le plaisir des jeux ! Notre restaurant café et parc de jeux AMY’S GAMES vous accueilleront bientôt dans un cadre chaleureux et convivial, parfait pour les familles, les amis et les collègues. Que vous cherchiez à organiser une fête d’anniversaire inoubliable, un dîner , une pause café ou une soirée entre amis ; notre établissement est le lieu parfait pour passer un moment agréable et mémorable"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Italic" />
+
+                <!-- Étoiles -->
+                <HorizontalStackLayout Spacing="2">
+                    <Label Text="3,6" TextColor="Black" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                </HorizontalStackLayout>
+
+                <!-- Commentaire client -->
+
+                <!-- Détails du service -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Adresse : P39M+G8Q, Oujda" FontSize="14" TextColor="Black" />
+                    <Label Text="Téléphone : 05365-21752" FontSize="14" TextColor="Black" />
+                    <Label Text="Horaires : 
+mardi	07:45–23:30
+mercredi	07:45–23:30
+jeudi
+(Fête du travail)
+07:45–23:30
+Les horaires peuvent être modifiés.
+vendredi	07:45–23:30
+samedi	07:45–23:30
+dimanche	07:45–23:30
+lundi	07:45–23:30
+" FontSize="14" TextColor="Black" />
+
+                </VerticalStackLayout>
+
+                <!-- Plats recommandés -->
+                <Label Text="Avis"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Padding="5,10" />
+
+                <Label Text="Une belle expérience dans l’ensemble, avec une décoration agréable et un bon service.
+
+J’aurais juste apprécié des plats faits maison plutôt que du surgelé, mais cela reste une option acceptable.
+Bon courage et bon continuation ✌️👍👍 "
+       FontSize="14"
+       TextColor="Black"
+       FontAttributes="Bold"
+       Padding="5,10" />
+                <Label Text="Bonne expérience. Plats goutus et bien présentés. Ambiance familiale et cosy. Décoration jardin d’hiver. Service rapide et professionnel. Petit bémol pour la température en salle malgré les braseros. "
+FontSize="14"
+TextColor="Black"
+FontAttributes="Bold"
+Padding="5,10" />
+
+                <!-- Carte dynamique -->
+                <Frame CornerRadius="20"
+Padding="0"
+HasShadow="True"
+BorderColor="#ddd"
+BackgroundColor="White"
+Margin="20,10"
+HorizontalOptions="Center">
+                    <ImageButton Source="localamy.png"
+          Aspect="AspectFill"
+          HeightRequest="220"
+          WidthRequest="360"
+          BackgroundColor="Transparent"
+          CornerRadius="20"
+          Clicked="OpenGoogleMaps" />
+                </Frame>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation fixe en bas -->
+        <Frame Grid.Row="1"
+CornerRadius="25"
+Padding="0"
+HeightRequest="70"
+HasShadow="True"
+Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="menu.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:menu"
+    xmlns:pages="clr-namespace:menu.Pages"
+    xmlns:qr="clr-namespace:menu.Qr"
+    Shell.FlyoutBehavior="Disabled">
+
+	<!-- Accueil -->
+	<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+	<!-- Restaurants -->
+	<ShellContent
+        Title="Restaurants"
+        ContentTemplate="{DataTemplate local:restaurants}"
+        Route="restaurants" />
+
+	<!-- Page de connexion -->
+	<ShellContent
+        ContentTemplate="{DataTemplate pages:SignInView}"
+        Route="SignIn" />
+
+	<!-- Page d'inscription -->
+	<ShellContent
+        ContentTemplate="{DataTemplate pages:SignUpView}"
+        Route="SignUp" />
+
+	<!-- Scanner QR -->
+	<ShellContent
+        Title="QR Scanner"
+        ContentTemplate="{DataTemplate qr:Qrscore}"
+        Route="Qrscore" />
+
+	<!-- Décrémentation QR -->
+	<ShellContent
+        Title="Décrémenter Score"
+        ContentTemplate="{DataTemplate qr:QrDescore}"
+        Route="QrDescore" />
+    <ShellContent
+    Title="Contact"
+    ContentTemplate="{DataTemplate local:Contact}"
+    Route="Contact" />
+
+</Shell>

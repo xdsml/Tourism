@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.restaurants"
+             BackgroundColor="#F9FAFB"
+             Title="Business"
+            >
+
+    <Grid>
+        <!-- Image de fond avec effet fondu -->
+        <Image Source="bgf.png" Aspect="AspectFill" Opacity="0.5" />
+
+        <Grid RowDefinitions="Auto,*,Auto">
+            <!-- Scrollable Content -->
+            <ScrollView Grid.Row="1">
+                <VerticalStackLayout Padding="20" Spacing="25">
+
+                    <!-- Fast Food -->
+                    <Frame CornerRadius="25" 
+                           Padding="0" 
+                           BackgroundColor="White" 
+                           HasShadow="True"
+                           Margin="0,10"
+                           BorderColor="#E0E0E0">
+                        <Image Source="fastfood.jpg" Aspect="AspectFill" HeightRequest="180">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="choixsnack" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+
+                    <!-- Restaurants -->
+                    <Frame CornerRadius="25"
+                           Padding="0"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Margin="0,10"
+                           BorderColor="#E0E0E0">
+                        <Image Source="restaurantfood.jpg" Aspect="AspectFill" HeightRequest="180">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="choixrestau" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+
+                    <!-- Caffe -->
+                    <Frame CornerRadius="25"
+                           Padding="0"
+                           BackgroundColor="White"
+                           HasShadow="True"
+                           Margin="0,10"
+                           BorderColor="#E0E0E0">
+                        <Image Source="caffe.jpg" Aspect="AspectFill" HeightRequest="180">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="choixcaffe" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+            <!-- Navigation Bar -->
+            <Frame Grid.Row="1"
+       CornerRadius="25"
+       Padding="0"
+       HeightRequest="70"
+       HasShadow="True"
+       Margin="10">
+                <Grid ColumnDefinitions="*,*,*,*,*">
+                    <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                    <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                        <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                    </Frame>
+
+                    <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

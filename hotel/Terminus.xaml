@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.Terminus"
+             Title="Terminus City Center Oujda"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Image de fond avec overlay sombre -->
+        <AbsoluteLayout>
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All" />
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" />
+        </AbsoluteLayout>
+
+        <!-- Contenu défilant -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="15" Padding="15" BackgroundColor="White" Margin="10">
+
+                <!-- Carousel d’images -->
+                <Grid>
+                    <CarouselView ItemsSource="{Binding Images}" HeightRequest="200">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFill" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkGray"
+                                   ItemsSource="{Binding Images}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="End"
+                                   Margin="0,0,0,10" />
+                </Grid>
+
+                <!-- Informations principales -->
+                <Label Text="Terminus City Center Oujda"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold" />
+
+                <Label Text="Hôtel 4 étoiles"
+                       FontSize="14"
+                       TextColor="Gray" />
+
+                <Label Text="Je recommande vivement"
+                       FontSize="14"
+                       TextColor="Black"
+                       FontAttributes="Italic" />
+
+                <!-- Étoiles -->
+                <HorizontalStackLayout Spacing="2">
+                    <Label Text="4,7" TextColor="Black" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="Gold" FontSize="20" />
+                    <Label Text="★" TextColor="LightGray" FontSize="20" />
+                </HorizontalStackLayout>
+
+                <!-- Commentaire client -->
+
+
+                <!-- Détails du service -->
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Bd Zerktouni, Place De La Gare, 60000 Oujda" FontSize="14" TextColor="Black" />
+                    <Label Text="📞 05290-80131." FontSize="14" TextColor="Black" />
+                    <Label Text="itué au cœur d'Oujda, le Terminus City Center Oujda vous accueille dans un hôtel luxueux, à 15 minutes de l'aéroport et à 10 minutes de la gare. L'Hotel Terminus City Center Oujda dispose de 80 chambres et suites offrant tout le confort nécessaire, notamment la télévision par satellite et la climatisation.
+ Pour votre confort, l'Hotel Terminus City Center Oujda possède 2 restaurants servant une cuisine internationale, locale et espagnole. L’établissement comporte également un bar. Pendant votre séjour, vous pourrez profiter de la piscine et vous détendre dans le hammam sur place.
+
+
+" FontSize="14" TextColor="Black" />
+
+                </VerticalStackLayout>
+
+                <!-- Plats recommandés -->
+
+
+
+
+
+                <VerticalStackLayout Spacing="5" Padding="5,10">
+
+                    <Label Text="📶 Connexion Wi-Fi gratuite" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🛎️ Service d'étage" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🍽️ 2 restaurants" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🏋️‍♂️ Centre de remise en forme" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🏊 Piscine extérieure" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🅿️ Parking gratuit" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🚭 Chambres non-fumeurs" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="💆 Spa et centre de bien-être" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="🍸 Bar" TextColor="#2E7D32" FontSize="14"/>
+                    <Label Text="☕ Petit-déjeuner exceptionnel" TextColor="#2E7D32" FontSize="14"/>
+
+                </VerticalStackLayout>
+
+
+
+
+                <Frame CornerRadius="20"
+Padding="0"
+HasShadow="True"
+BorderColor="#ddd"
+BackgroundColor="White"
+Margin="20,10"
+HorizontalOptions="Center">
+                    <ImageButton Source="localterlinus.png"
+          Aspect="AspectFill"
+          HeightRequest="220"
+          WidthRequest="360"
+          BackgroundColor="Transparent"
+          CornerRadius="20"
+          Clicked="OpenGoogleMaps" />
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation fixe en bas -->
+        <Frame Grid.Row="1"
+CornerRadius="25"
+Padding="0"
+HeightRequest="70"
+HasShadow="True"
+Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

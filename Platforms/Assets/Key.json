@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "superb-dream-446512-c7",
+  "private_key_id": "0357eb3babcd5201ef23fc417c42fba2e516720b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDyaUkMXohTV6D\nFuMmGGb9ehh3a9zpA5F9YvbI3Hds6luBhAonyTbO5vOrBKvcgteOPOEOGJqoc2MC\nWUnZAq0nQ6JE2LW+MdtSgEs9X++RU6KL39n7+WsO8vebGpUVl6EFVPbQ4W1jcnHG\nnZx0AaGYNE76P7r0Bt6XtXAVct8PDhSgagiNKOTBsI+UEuJLt8A8zlqe/U0Jyj3i\nMjCXdmrxWfoDDjji0BdLlp8m9VXO5M6/3wit+x4bP+1LLVe6aIEur5lwIPLeWjha\n0KzOmE7bSt5g8F9AsPhCGIaIXR1+zC+ESyJyakuM6DTKEZ33tMlzalMi1OkZfngN\nwol7Oee9AgMBAAECggEAA6b8kjXSq/hEEDwQtzQP1Pn4DSxBYsUxOHTsgR4GihnY\nfj+rqwcIiahw+OqXCr+tf6Brm1l12YWzhGAmVEQsQ9X+mvwTu3O1iwh/i52a4lIv\nooSlwQFSKbIT6kkL6Tf0ct0qCiBjOI5ybsyflhUDG6WBwdttl6IULDs5sMpW7/8t\nHrJo+Rd4tiuBtfvxI9PdIgGR8tyt1u4SWsGAQxoJaZc9FKPJfEVhNVOQ3AUNlGHB\nQCUz0sxmvYq/V8erPDy7yEsL7y7pM+N+PLoTP6soZsVVK9+4gxKu+/wJOzl32JPk\nx8DIFg0z6UgHzZyQoj/IPxvL0lrhuEnTnOB59aOJKQKBgQDxVOEizmfDMf1VSwEE\nC+ojNYU+1OTcQn7PSrWjRoFNhXrXNIOd5U8i0/DSzycOh6TWjWvmNPP2/D0Q6Bvd\nu0iAdPu1dgdAWSPiqnrQvS9/m0sJ6bxT/aocjAY9tv1pTZ2swSsrFzx5BvgJqg+p\n8AHjgs16SsytbPnWjJg25RU7GQKBgQDPsBo/Rea6VxXeae8tICGBtVDi/m3FIfuU\nx73BQca9nafnFJeKfOti0axlsD4Y6QNs99FMFH2XRA5pkW/kHk+a/nvm8bRZ+fE3\npXxnj18kQn6XRH/Gn1HvvzJpzm6RHmabYK8ntbRI65z/p9SBGUufsvpQ7wCgcVJo\nC38EQgIKRQKBgD+GSzjhQhj0eK3R73OEO16HQQq3+YItEro3/TX8Yh7oytwJG7gd\nW0ZcqaCkHLDLbc14LnXLbIiP/vcLUgJ8wOnnYTZz2hbLIBITM/7sPauGUitK1mL5\ne6TGCwKFv5DPeHi35EgUdruY5QOOO09NOQINNU9Cjzv7WoxqN8sDZCJJAoGBAKRo\nm96Kz2OjnMQ8yAHI9b1gc2++SddMV4QnuqdKErH4I/ph6rTOvuezY+373qyJiRSx\n+RVpAyLD1UTsxM6o0Au6eQsRO9weaD3M2vaAIKjrmprUtvHdHVfU22u25wAqOL+3\ngfDFfrpbCiW4DhlElQEPBekbyjs4eiuzLhGIz2ShAoGAdUBcpMs9IYM23AZE1OqM\ny9XxcuFzsEa5UDhp4lp2gZrOXWJBq77/zSxbvG4OcZX0q+53pJkCyV+ATgb4HLaU\n+gQsHZ/cBf4OfuT3qisHfjUVQSSVyeJPC/t+QSfNvgFaBKv+OuwLuDHe2QlIHoog\nR2PyGKQ5hrEpxmLOMlFpdiI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "uploader-app@superb-dream-446512-c7.iam.gserviceaccount.com",
+  "client_id": "104164738607868640083",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/uploader-app%40superb-dream-446512-c7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

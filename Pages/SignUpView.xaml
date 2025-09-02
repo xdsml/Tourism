@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.Pages.SignUpView"
+             BackgroundColor="Black"
+             BackgroundImageSource="background1.jpeg">
+
+    <Grid VerticalOptions="CenterAndExpand" Padding="30">
+        <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+
+            <!-- Champ Nom -->
+            <Frame BorderColor="White" BackgroundColor="White" CornerRadius="10"
+                   WidthRequest="250" HeightRequest="50" HasShadow="False" Padding="0">
+                <Entry Text="{Binding Nom}"
+                       Placeholder="Nom"
+                       PlaceholderColor="Gray"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Champ Prénom -->
+            <Frame BorderColor="White" BackgroundColor="White" CornerRadius="10"
+                   WidthRequest="250" HeightRequest="50" HasShadow="False" Padding="0">
+                <Entry Text="{Binding Prenom}"
+                       Placeholder="Prénom"
+                       PlaceholderColor="Gray"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Champ Email -->
+            <Frame BorderColor="White" BackgroundColor="White" CornerRadius="10"
+                   WidthRequest="250" HeightRequest="50" HasShadow="False" Padding="0">
+                <Entry Text="{Binding Email}"
+                       Placeholder="Email"
+                       PlaceholderColor="Gray"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Keyboard="Email"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Champ Username -->
+           
+
+            <!-- Champ Mot de passe -->
+            <Frame BorderColor="White" BackgroundColor="White" CornerRadius="10"
+                   WidthRequest="250" HeightRequest="50" HasShadow="False" Padding="0">
+                <Entry Text="{Binding Password}"
+                       Placeholder="Mot de passe"
+                       IsPassword="True"
+                       PlaceholderColor="Gray"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       Margin="10,0"/>
+            </Frame>
+
+            <!-- Bouton inscription -->
+            <Button Text="S'inscrire"
+                    Command="{Binding SignUpCommand}"
+                    BackgroundColor="#EBA067"
+                    TextColor="White"
+                    WidthRequest="250"
+                    CornerRadius="10" />
+
+            <!-- Lien vers connexion -->
+            <Label Text="Vous avez déjà un compte ? Se connecter"
+                   TextColor="LightBlue"
+                   HorizontalOptions="Center"
+                   TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateSignInCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

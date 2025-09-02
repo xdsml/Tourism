@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.piri"
+             Title="Piri Piri : Poulet Braisé"
+             BackgroundColor="#f5f5f5">
+
+    <Grid RowDefinitions="*, Auto">
+        <AbsoluteLayout>
+            <!-- Image de fond pleine écran -->
+            <Image Source="jam3.jpg"
+                   Aspect="AspectFill"
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+                   AbsoluteLayout.LayoutFlags="All"/>
+
+            <!-- Overlay sombre -->
+            <BoxView BackgroundColor="Black"
+                     Opacity="0.4"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"/>
+
+            <!-- Contenu Overlay (vide ici) -->
+            <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  AbsoluteLayout.LayoutFlags="All">
+                <!-- Contenu additionnel possible -->
+            </Grid>
+        </AbsoluteLayout>
+
+        <!-- Contenu principal défilable -->
+        <ScrollView Grid.Row="0" Orientation="Vertical">
+            <Frame Margin="10" Padding="0" CornerRadius="20" HasShadow="True" BackgroundColor="White">
+                <VerticalStackLayout Padding="10">
+                    <!-- Slider d'images avec coins arrondis -->
+                    <Grid>
+                        <CarouselView ItemsSource="{Binding Images}" HeightRequest="200" IndicatorView="carouselIndicators">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame CornerRadius="15" HasShadow="True" Padding="0" Margin="5">
+                                        <Image Source="{Binding}" Aspect="AspectFill"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+
+                        <!-- Indicateurs -->
+                        <IndicatorView x:Name="carouselIndicators"
+                                   IndicatorColor="LightGray"
+                                   SelectedIndicatorColor="DarkBlue"
+                                   HorizontalOptions="Center"
+                                   Margin="0,5"/>
+                    </Grid>
+
+                    <!-- Description de l’hôtel -->
+                    <Label Text="Piri Piri : Poulet Braisé"
+                       FontSize="22"
+                       TextColor="#2c3e50"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Les poissons sont délicieux, j'ai beaucoup aimé les sardines grillées, la soupe de poisson était délicieuse, les fritures de calamars top."
+                       FontSize="16"
+                       TextColor="#555"
+                       Padding="5"
+                       LineHeight="1.5"/>
+
+                    <!-- Étoiles -->
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label Text="4,9" TextColor="#555" FontSize="20"/>
+                        <Label Text="★" TextColor="Gold" FontSize="20"/>
+                        <Label Text="★" TextColor="Gold" FontSize="20"/>
+                        <Label Text="★" TextColor="Gold" FontSize="20"/>
+                        <Label Text="★" TextColor="Gold" FontSize="20"/>
+                        <Label Text="★" TextColor="Gold" FontSize="20"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Localisation -->
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="1–50 MAD Restaurant familial " FontSize="16" TextColor="#444"/>
+                                <Span Text="Adresse : M4V6+RCF, Oujda" TextDecorations="Underline" TextColor="#444" FontAttributes="Bold"/>
+                                <Span Text="Horaires : 
+vendredi	16:00–00:00
+samedi	12:00–00:00
+dimanche	12:00–00:00
+lundi	12:00–00:00
+mardi	12:00–00:00
+mercredi	12:00–00:00
+jeudi   
+
+12:00–00:00 " FontSize="16" TextColor="#444"/>
+
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Détails -->
+                    <VerticalStackLayout Spacing="4" Padding="10">
+                        <Label Text="🍽️ Service : Repas sur place" FontSize="14" TextColor="#333"/>
+                        <Label Text="💸 Prix : 1–50 MAD" FontSize="14" TextColor="#333"/>
+                        <Label Text="👨‍🍳 Cuisine : 5" FontSize="14" TextColor="#333"/>
+                        <Label Text="🧑‍🤝‍🧑 Service : 5" FontSize="14" TextColor="#333"/>
+                        <Label Text="🎉 Ambiance : 5" FontSize="14" TextColor="#333"/>
+                    </VerticalStackLayout>
+
+                    <!-- Like -->
+                    <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                        <Label Text="👍 J’aime" FontSize="14" TextColor="#333" FontAttributes="Bold"/>
+                        <ImageButton Source="like.png" HeightRequest="40" WidthRequest="40" BackgroundColor="Transparent"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Image carte -->
+                    <Frame CornerRadius="20"
+Padding="0"
+HasShadow="True"
+BorderColor="#ddd"
+BackgroundColor="White"
+Margin="20,10"
+HorizontalOptions="Center">
+                        <ImageButton Source="localpiri.png"
+          Aspect="AspectFill"
+          HeightRequest="220"
+          WidthRequest="360"
+          BackgroundColor="Transparent"
+          CornerRadius="20"
+          Clicked="OpenGoogleMaps" />
+                    </Frame>
+
+                </VerticalStackLayout>
+            </Frame>
+        </ScrollView>
+
+        <!-- Barre de navigation -->
+        <Frame Grid.Row="1"
+CornerRadius="25"
+Padding="0"
+HeightRequest="70"
+HasShadow="True"
+Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>

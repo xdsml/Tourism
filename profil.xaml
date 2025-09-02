@@ -1,0 +1,128 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.profil"
+             Title="Profil">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Partie principale -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="30" Spacing="25" HorizontalOptions="Center">
+
+                <!-- Image Profil -->
+                <Frame WidthRequest="140" HeightRequest="140"
+                       CornerRadius="70"
+                       HasShadow="True"
+                       Padding="0"
+                       IsClippedToBounds="True"
+                       BackgroundColor="LightGray"
+                       HorizontalOptions="Center">
+                    <Image x:Name="profilImage"
+                           Aspect="AspectFill"
+                           WidthRequest="140"
+                           HeightRequest="140"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                            <PinchGestureRecognizer PinchUpdated="OnImagePinchUpdated"/>
+                            <PanGestureRecognizer PanUpdated="OnImagePanUpdated"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame>
+
+                <!-- Nom + Prénom côte à côte -->
+                <!-- Nom + Prénom côte à côte -->
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label x:Name="nomLabel"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="Black" />
+                    <Label x:Name="prenomLabel"
+           FontSize="20"
+           TextColor="Black" />
+                </HorizontalStackLayout>
+
+                <!-- 🔥 Ajoute Score ici -->
+                <Label x:Name="scoreLabel"
+       FontSize="18"
+       FontAttributes="Bold"
+       TextColor="DarkGreen"
+       HorizontalOptions="Center"/>
+
+
+                <!-- Bouton pour changer photo -->
+                <Button Text="Changer ma photo"
+                        BackgroundColor="black"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        
+                        WidthRequest="250"
+                        Clicked="OnUploadImageClicked"
+                        HorizontalOptions="CenterAndExpand" />
+
+                <!-- Autres boutons -->
+                
+                
+               
+             
+
+                <!-- Déconnexion -->
+                <Button Text="Déconnexion"
+                        CornerRadius="20"
+                        FontSize="16"
+                        HeightRequest="50"
+                        WidthRequest="300"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="OnLogoutClicked" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Navigation inférieure -->
+        <Frame Grid.Row="1"
+               CornerRadius="25"
+               Padding="0"
+               HeightRequest="70"
+               HasShadow="True"
+               Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+              
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+                
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" />
+            </Grid>
+        </Frame>
+
+        <!-- Popup déconnexion -->
+        <ContentView x:Name="LogoutPopup"
+                     BackgroundColor="#80000000"
+                     IsVisible="False"
+                     Padding="30"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     ZIndex="10">
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="25"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   WidthRequest="300">
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Es-tu sûr de vouloir te déconnecter ?"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Black"/>
+                    <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                        <Button Text="Oui" BackgroundColor="Red" TextColor="White" Clicked="ConfirmLogout_Clicked" />
+                        <Button Text="Annuler" BackgroundColor="Gray" TextColor="White" Clicked="CancelLogout_Clicked" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </ContentView>
+
+    </Grid>
+</ContentPage>

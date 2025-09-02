@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="menu.Qr.QrDescore"
+             Title="Réduction scanner">
+
+    <Grid>
+
+        <!-- Scanner QR -->
+        <zxing:CameraBarcodeReaderView x:Name="barcodeReaderDescore"
+                                       BarcodesDetected="barcodeReaderDescore_BarcodesDetected"
+                                       IsDetecting="True"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand" />
+
+        <!-- Bouton Fermer -->
+        <ImageButton Source="fermer.png"
+                     Clicked="OnCloseTapped"
+                     WidthRequest="50"
+                     HeightRequest="50"
+                     BackgroundColor="Transparent"
+                     HorizontalOptions="Center"
+                     VerticalOptions="End"
+                     Margin="0,0,0,40" />
+
+    </Grid>
+</ContentPage>

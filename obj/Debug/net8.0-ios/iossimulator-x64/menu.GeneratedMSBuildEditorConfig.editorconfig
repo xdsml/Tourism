@@ -1,0 +1,258 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = menu
+build_property.ProjectDir = C:\Users\Mehdi\Desktop\Nouveau dossier (2)\menuvvvvvv\menuv2\menu\menu\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/caffe/amy.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.caffe.amy.xaml
+build_metadata.AdditionalFiles.TargetPath = caffe\amy.xaml
+build_metadata.AdditionalFiles.RelativePath = caffe\amy.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/caffe/BleuCafé.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.caffe.BleuCafé.xaml
+build_metadata.AdditionalFiles.TargetPath = caffe\BleuCafé.xaml
+build_metadata.AdditionalFiles.RelativePath = caffe\BleuCafé.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/caffe/lEmerdraude.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.caffe.lEmerdraude.xaml
+build_metadata.AdditionalFiles.TargetPath = caffe\lEmerdraude.xaml
+build_metadata.AdditionalFiles.RelativePath = caffe\lEmerdraude.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/caffe/LExcellence.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.caffe.LExcellence.xaml
+build_metadata.AdditionalFiles.TargetPath = caffe\LExcellence.xaml
+build_metadata.AdditionalFiles.RelativePath = caffe\LExcellence.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/choixcaffe.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.choixcaffe.xaml
+build_metadata.AdditionalFiles.TargetPath = choixcaffe.xaml
+build_metadata.AdditionalFiles.RelativePath = choixcaffe.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/choixhotel.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.choixhotel.xaml
+build_metadata.AdditionalFiles.TargetPath = choixhotel.xaml
+build_metadata.AdditionalFiles.RelativePath = choixhotel.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/choixmonument.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.choixmonument.xaml
+build_metadata.AdditionalFiles.TargetPath = choixmonument.xaml
+build_metadata.AdditionalFiles.RelativePath = choixmonument.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/ChoixPhotoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.ChoixPhotoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ChoixPhotoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ChoixPhotoPage.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/choixrestau.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.choixrestau.xaml
+build_metadata.AdditionalFiles.TargetPath = choixrestau.xaml
+build_metadata.AdditionalFiles.RelativePath = choixrestau.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/choixsnack.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.choixsnack.xaml
+build_metadata.AdditionalFiles.TargetPath = choixsnack.xaml
+build_metadata.AdditionalFiles.RelativePath = choixsnack.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Contact.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Contact.xaml
+build_metadata.AdditionalFiles.TargetPath = Contact.xaml
+build_metadata.AdditionalFiles.RelativePath = Contact.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/hotel/HotelRoyal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.hotel.HotelRoyal.xaml
+build_metadata.AdditionalFiles.TargetPath = hotel\HotelRoyal.xaml
+build_metadata.AdditionalFiles.RelativePath = hotel\HotelRoyal.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/hotel/ibis.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.hotel.ibis.xaml
+build_metadata.AdditionalFiles.TargetPath = hotel\ibis.xaml
+build_metadata.AdditionalFiles.RelativePath = hotel\ibis.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/hotel/Relax.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.hotel.Relax.xaml
+build_metadata.AdditionalFiles.TargetPath = hotel\Relax.xaml
+build_metadata.AdditionalFiles.RelativePath = hotel\Relax.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/hotel/Terminus.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.hotel.Terminus.xaml
+build_metadata.AdditionalFiles.TargetPath = hotel\Terminus.xaml
+build_metadata.AdditionalFiles.RelativePath = hotel\Terminus.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/lesrestaurants/belleorient.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.lesrestaurants.belleorient.xaml
+build_metadata.AdditionalFiles.TargetPath = lesrestaurants\belleorient.xaml
+build_metadata.AdditionalFiles.RelativePath = lesrestaurants\belleorient.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/lesrestaurants/Lunaria.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.lesrestaurants.Lunaria.xaml
+build_metadata.AdditionalFiles.TargetPath = lesrestaurants\Lunaria.xaml
+build_metadata.AdditionalFiles.RelativePath = lesrestaurants\Lunaria.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/lesrestaurants/MJ.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.lesrestaurants.MJ.xaml
+build_metadata.AdditionalFiles.TargetPath = lesrestaurants\MJ.xaml
+build_metadata.AdditionalFiles.RelativePath = lesrestaurants\MJ.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/lesrestaurants/piri.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.lesrestaurants.piri.xaml
+build_metadata.AdditionalFiles.TargetPath = lesrestaurants\piri.xaml
+build_metadata.AdditionalFiles.RelativePath = lesrestaurants\piri.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/matches/matchelive.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.matches.matchelive.xaml
+build_metadata.AdditionalFiles.TargetPath = matches\matchelive.xaml
+build_metadata.AdditionalFiles.RelativePath = matches\matchelive.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/monumsent/citerne.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.monumsent.citerne.xaml
+build_metadata.AdditionalFiles.TargetPath = monumsent\citerne.xaml
+build_metadata.AdditionalFiles.RelativePath = monumsent\citerne.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/monumsent/Kasbah.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.monumsent.Kasbah.xaml
+build_metadata.AdditionalFiles.TargetPath = monumsent\Kasbah.xaml
+build_metadata.AdditionalFiles.RelativePath = monumsent\Kasbah.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/monumsent/Mausolee.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.monumsent.Mausolee.xaml
+build_metadata.AdditionalFiles.TargetPath = monumsent\Mausolee.xaml
+build_metadata.AdditionalFiles.RelativePath = monumsent\Mausolee.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/monumsent/mosqueeHassanII.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.monumsent.mosqueeHassanII.xaml
+build_metadata.AdditionalFiles.TargetPath = monumsent\mosqueeHassanII.xaml
+build_metadata.AdditionalFiles.RelativePath = monumsent\mosqueeHassanII.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Pages/SignInView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Pages.SignInView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignInView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignInView.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Pages/SignUpView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Pages.SignUpView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignUpView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignUpView.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/profil.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.profil.xaml
+build_metadata.AdditionalFiles.TargetPath = profil.xaml
+build_metadata.AdditionalFiles.RelativePath = profil.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Qr/QrDescore.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Qr.QrDescore.xaml
+build_metadata.AdditionalFiles.TargetPath = Qr\QrDescore.xaml
+build_metadata.AdditionalFiles.RelativePath = Qr\QrDescore.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Qr/Qrscore.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Qr.Qrscore.xaml
+build_metadata.AdditionalFiles.TargetPath = Qr\Qrscore.xaml
+build_metadata.AdditionalFiles.RelativePath = Qr\Qrscore.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/restaurants.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.restaurants.xaml
+build_metadata.AdditionalFiles.TargetPath = restaurants.xaml
+build_metadata.AdditionalFiles.RelativePath = restaurants.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/snack/BigDal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.snack.BigDal.xaml
+build_metadata.AdditionalFiles.TargetPath = snack\BigDal.xaml
+build_metadata.AdditionalFiles.RelativePath = snack\BigDal.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/snack/BrimoSnack.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.snack.BrimoSnack.xaml
+build_metadata.AdditionalFiles.TargetPath = snack\BrimoSnack.xaml
+build_metadata.AdditionalFiles.RelativePath = snack\BrimoSnack.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/snack/DrifFood.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.snack.DrifFood.xaml
+build_metadata.AdditionalFiles.TargetPath = snack\DrifFood.xaml
+build_metadata.AdditionalFiles.RelativePath = snack\DrifFood.xaml
+
+[C:/Users/Mehdi/Desktop/Nouveau dossier (2)/menuvvvvvv/menuv2/menu/menu/snack/sahbi.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = menu.snack.sahbi.xaml
+build_metadata.AdditionalFiles.TargetPath = snack\sahbi.xaml
+build_metadata.AdditionalFiles.RelativePath = snack\sahbi.xaml

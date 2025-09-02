@@ -1,0 +1,75 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.Contact"
+             Title="Support"
+             BackgroundColor="#FAFAFA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="20">
+
+            <!-- Title Label -->
+            <Frame Padding="20,15"
+       CornerRadius="20" 
+                BackgroundColor="Black"
+       HorizontalOptions="Center"
+       Margin="0,20"
+       HasShadow="True">
+                <Label Text="Contactez-nous"
+           FontSize="28"
+           FontAttributes="Bold"
+           TextColor="White"
+           HorizontalOptions="Center"/>
+            </Frame>
+            <!-- Sujet Entry -->
+            <Frame CornerRadius="12" BackgroundColor="#FFFFFF" Padding="12" HasShadow="True">
+                <Entry x:Name="SujetEntry"
+                       Placeholder="Sujet"
+                       FontSize="16"
+                       TextColor="#333"
+                       BackgroundColor="Transparent"/>
+            </Frame>
+
+            <!-- Message Editor -->
+            <Frame CornerRadius="12" BackgroundColor="#FFFFFF" Padding="12" HasShadow="True">
+                <Editor x:Name="MessageEditor"
+                        Placeholder="Votre message ici..."
+                        FontSize="16"
+                        TextColor="#333"
+                        AutoSize="TextChanges"
+                        BackgroundColor="Transparent"
+                        HeightRequest="150"/>
+            </Frame>
+
+            <!-- Buttons -->
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" Margin="0,20">
+                <Button Text="Retour"
+                        WidthRequest="120"
+                        HeightRequest="45"
+                        BackgroundColor="#BDC3C7"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        Clicked="OnretourClicked"/>
+                <Button Text="Envoyer"
+                        WidthRequest="120"
+                        HeightRequest="45"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        Clicked="OnEnvoyerClicked"/>
+            </HorizontalStackLayout>
+
+            <!-- Footer Text -->
+            <Frame BackgroundColor="Transparent" Padding="10">
+                <Label Text="Nous sommes toujours là pour vous. Notre équipe de support répond dans un délai de 24 heures.Bienvenue sur notre plateforme ! 😊"
+                       FontSize="14"
+                       TextColor="#7F8C8D"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineHeight="1.3"/>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

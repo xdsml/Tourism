@@ -1,0 +1,216 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="menu.choixmonument"
+             BackgroundColor="#F5F5F5"
+             Title="Monuments">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- Contenu principal scrollable -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="15" Spacing="20">
+                <!-- Première carte -->
+                <!-- Troisième carte -->
+                <Frame CornerRadius="20" HasShadow="True" BackgroundColor="White" Padding="0">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="15" Padding="0" HasShadow="False" IsClippedToBounds="True" Margin="10">
+                            <Image Source="mausolee.jpg" HeightRequest="150" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <StackLayout Padding="10">
+                            <Label Text="Le Mausolée Mohammed V" FontAttributes="Bold" FontSize="20" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="2">
+                                <Label Text="4,6" FontSize="14" TextColor="#757575"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#E0E0E0" FontSize="16"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="Site historique à Rabat" FontAttributes="Bold" FontSize="16" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="15" Margin="0,10,0,0">
+                                <Button Text="Voir" WidthRequest="360"
+                        FontSize="16"
+                        BackgroundColor="#FF7043"
+                        TextColor="White"
+                        CornerRadius="12"
+                        BorderColor="Transparent"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Mausole"/>
+
+                                <ImageButton Source="bookmark.png"
+                             WidthRequest="28"
+                             HeightRequest="28"
+                             BackgroundColor="Transparent"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+
+
+
+
+
+                <Frame CornerRadius="20" HasShadow="True" BackgroundColor="White" Padding="0">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="15" Padding="0" HasShadow="False" IsClippedToBounds="True" Margin="10">
+                            <Image Source="citerne.jpg" HeightRequest="150" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <StackLayout Padding="10">
+                            <Label Text="La citerne portugaise" FontAttributes="Bold" FontSize="20" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="2">
+                                <Label Text="4,2" FontSize="14" TextColor="#757575"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#E0E0E0" FontSize="16"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="Bâtiment patrimonial à El Jadidat" FontAttributes="Bold" FontSize="16" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="15" Margin="0,10,0,0">
+                                <Button Text="Voir" WidthRequest="360"
+        FontSize="16"
+        BackgroundColor="#FF7043"
+        TextColor="White"
+        CornerRadius="12"
+        BorderColor="Transparent"
+        HorizontalOptions="FillAndExpand"
+        Clicked="citerne"/>
+
+                                <ImageButton Source="bookmark.png"
+             WidthRequest="28"
+             HeightRequest="28"
+             BackgroundColor="Transparent"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+
+
+
+
+
+
+
+                <Frame CornerRadius="20" HasShadow="True" BackgroundColor="White" Padding="0">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="15" Padding="0" HasShadow="False" IsClippedToBounds="True" Margin="10">
+                            <Image Source="kasbah.jpg" HeightRequest="150" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <StackLayout Padding="10">
+                            <Label Text="La Kasbah de Taourirt" FontAttributes="Bold" FontSize="20" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="2">
+                                <Label Text="4,2" FontSize="14" TextColor="#757575"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#E0E0E0" FontSize="16"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="Si vous séjournez à Ouarzazate, un petit saut à la Kasbah de Taourit est impératif ! " FontAttributes="Bold" FontSize="16" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="15" Margin="0,10,0,0">
+                                <Button Text="Voir" WidthRequest="360"
+FontSize="16"
+BackgroundColor="#FF7043"
+TextColor="White"
+CornerRadius="12"
+BorderColor="Transparent"
+HorizontalOptions="FillAndExpand"
+Clicked="Kasbah"/>
+
+                                <ImageButton Source="bookmark.png"
+     WidthRequest="28"
+     HeightRequest="28"
+     BackgroundColor="Transparent"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+
+
+
+
+
+                <Frame CornerRadius="20" HasShadow="True" BackgroundColor="White" Padding="0">
+                    <VerticalStackLayout>
+                        <Frame CornerRadius="15" Padding="0" HasShadow="False" IsClippedToBounds="True" Margin="10">
+                            <Image Source="mosqueeh5.jpg" HeightRequest="150" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <StackLayout Padding="10">
+                            <Label Text="La mosquée Hassan II" FontAttributes="Bold" FontSize="20" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="2">
+                                <Label Text="4,2" FontSize="14" TextColor="#757575"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#FFC107" FontSize="16"/>
+                                <Label Text="★" TextColor="#E0E0E0" FontSize="16"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="La Mosquée Hassan II est la plus grande mosquée du monde après celle de la Mecque et de Médine. " FontAttributes="Bold" FontSize="16" TextColor="#212121"/>
+
+                            <HorizontalStackLayout Spacing="15" Margin="0,10,0,0">
+                                <Button Text="Voir" WidthRequest="360"
+FontSize="16"
+BackgroundColor="#FF7043"
+TextColor="White"
+CornerRadius="12"
+BorderColor="Transparent"
+HorizontalOptions="FillAndExpand"
+Clicked="mosque"/>
+
+                                <ImageButton Source="bookmark.png"
+     WidthRequest="28"
+     HeightRequest="28"
+     BackgroundColor="Transparent"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barre de navigation -->
+        <Frame Grid.Row="1"
+       CornerRadius="25"
+       Padding="0"
+       HeightRequest="70"
+       HasShadow="True"
+       Margin="10">
+            <Grid ColumnDefinitions="*,*,*,*,*">
+                <ImageButton Source="home.png" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" Clicked="home" />
+
+                <Frame Grid.Column="2" WidthRequest="60" HeightRequest="60" CornerRadius="30" VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+                    <ImageButton Source="compass.png" Grid.Column="3" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnCompassClicked" />
+                </Frame>
+
+                <ImageButton Source="profile_user.png" Grid.Column="4" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" Clicked="profil"/>
+            </Grid>
+        </Frame>
+
+    </Grid>
+</ContentPage>
